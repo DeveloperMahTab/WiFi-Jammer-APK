@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+/* ********************************* */
+
+body{
+  font-family: 'Noto Sans TC', sans-serif;
+  height: 100vh;
+  position: relative;
+  /* background: linear-gradient(75deg,#ff0000,#36393e); */
+}
+body::before{
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(../img/bg-desktop.jpg) no-repeat;
+  background-size: cover;
+  
+}
+.click, .popup_box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+.click{
+  background: #ff0000;
+  color: white;
+  font-size: 22px;
+  font-family: arial;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+}
+.popup_box {
+  width: 400px;
+  background: #000;
+  text-align: center;
+  align-items: center;
+  padding: 40px;
+  box-shadow: 0px 5px 41px #ffffff33;
+  z-index: 9999;
+  display: none;
+}
+.popup_box img {
+  width: 15%;
+}
+.popup_box h1 {
+  font-size: 30px;
+  color: #ff0000;
+  margin-bottom: 5px;
+}
+.popup_box label{
+  font-size: 23px;
+  color: #8d2f2f;
+}
+.popup_box .btns{
+  margin: 40px 0 0 0;
+}
+.btns .btn1, .btns .btn2{
+  background: #999999;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 10px 13px;
+}
+.btns .btn2{
+  margin-left: 20px;
+  background: #ff3333;
+  border: 1px solid #cc0000;
+}
+.btns .btn1:hover{
+  transition: .5s;
+  background: #8c8c8c;
+}
+.btns .btn2:hover{
+  transition: .5s;
+  background: #e60000;
+}
+
+
+/* 
+  Responsive
+*/
+
+@media (max-width: 500px) {
+
+  body::before{
+    background: url(../img/bg-mobile.jpg) no-repeat;
+    background-size: cover;
+    filter: blur(0.5px);
+    
+  }
+  .popup_box {
+    width: 245px;
+    background: #000000;
+    box-shadow: 0px 0px 40px #ca1f1f;
+  }
+
+  .popup_box img {
+    width: 30%;
+  }
+  .popup_box h1 {
+    font-size: 25px;
+  }
+  .popup_box label{
+    font-size: 18px;
+  }
+  .popup_box .btns{
+    margin: 0;
+  }
+  .btns .btn2 {
+    margin-left: 0;
+    background: #ff3333;
+    border: 1px solid #cc0000;
+  }
+  .btn1, .btn2{
+    display: block;
+    margin-top: 10px;
+  }
+  
+}
